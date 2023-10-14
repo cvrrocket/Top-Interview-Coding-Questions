@@ -1,0 +1,58 @@
+/*
+You are given an integer array score of size n, where score[i] is the score of the ith athlete in a competition. All the scores are guaranteed to be unique.
+
+The athletes are placed based on their scores, where the 1st place athlete has the highest score, the 2nd place athlete has the 2nd highest score, and so on. The placement of each athlete determines their rank:
+
+The 1st place athlete's rank is "Gold Medal".
+The 2nd place athlete's rank is "Silver Medal".
+The 3rd place athlete's rank is "Bronze Medal".
+For the 4th place to the nth place athlete, their rank is their placement number (i.e., the xth place athlete's rank is "x").
+Return an array answer of size n where answer[i] is the rank of the ith athlete.
+*/
+
+class Solution {
+public:
+    vector<string> findRelativeRanks(vector<int>& score) {
+        priority_queue<int> pq;
+        for(auto it: score)
+        {
+            pq.push(it);
+        }   
+        int  i = 1;
+        map<int,string> mp; 
+        while(!pq.empty())
+        {
+            if(i==1)
+            {
+                mp.insert({pq.top(),"Gold Medal"});
+                pq.pop();
+                i++;
+            }
+            else if(i==2)
+            {
+                mp.insert({pq.top(),"Silver Medal"});
+                pq.pop();
+                i++;
+            }
+            else if(i==3)
+            {
+                mp.insert({pq.top(),"Bronze Medal"});
+                pq.pop();
+                i++;
+            }
+            else
+            {
+                string st = to_string(i);
+                mp.insert({pq.top(),st});
+                pq.pop();
+                i++;
+            }
+        }
+        vector<string> ans;
+        for(int i = 0; i < score.size(); i++)
+        {
+            ans.push_back(mp[score[i]]);
+        }
+        return ans;
+    }
+};
