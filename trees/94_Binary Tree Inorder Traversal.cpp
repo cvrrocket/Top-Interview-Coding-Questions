@@ -38,7 +38,7 @@ public:
     }
 private:
     void inorderUtil(TreeNode* root, vector<int>& ans) {
-        // if(root==NULL)
+        // if(root==NULL)//null
             // return
         if(root!=NULL){
             inorderUtil(root->left, ans);
