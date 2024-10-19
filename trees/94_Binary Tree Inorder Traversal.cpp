@@ -40,7 +40,7 @@ private:
     void inorderUtil(TreeNode* root, vector<int>& ans) {
         // if(root==NULL)
             // return
-        if(root!=NULL){
+        if(root!=NULL){//null
             inorderUtil(root->left, ans);
             ans.push_back(root->val);
             inorderUtil(root->right, ans);
