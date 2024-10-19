@@ -28,7 +28,7 @@ private:
     }
 
     vector<int> findMostFrequent(unordered_map<int, int>& freqMap) {
-        int maxFreq = 0;
+        int maxFreq = 0;//(max frequency)
         vector<int> result;
 
         // now iterating over word, freq pair 
@@ -39,7 +39,7 @@ private:
         //     cout << "(" << p->first << ", " <<
         //                 p->second << ")\n";
 
-        // Find the maximum frequency
+        // Find the maximum frequency(freq)
         for (const auto& pair : freqMap) {//for (auto x : umap){..cout<<x.first<<x.second<<endl;..}
             if (pair.second > maxFreq) {
                 maxFreq = pair.second;
