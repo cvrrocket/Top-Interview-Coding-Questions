@@ -12,7 +12,7 @@ public:
     //     }
     //     ans+=1;
     //     while(ans){//ans/10 != 0
-    //         ansList.insert(ansList.begin(), ans%10);// ansList.push_front(ans%10);//push_back and reverse the ans while returning
+    //         ansList.insert(ansList.begin(), ans%10);// ansList.push_front(ans%10);//push_back and reverse the ans while returning from function
     //         ans/=10;
     //     }
     //     // if(digits[digits.size()-1]+1 == 10){

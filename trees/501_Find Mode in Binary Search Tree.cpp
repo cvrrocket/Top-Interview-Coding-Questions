@@ -29,7 +29,7 @@ private:
 
     vector<int> findMostFrequent(unordered_map<int, int>& freqMap) {
         int maxFreq = 0;//(max frequency)
-        vector<int> result;
+        vector<int> result;//res list
 
         // now iterating over word, freq pair 
         // and printing them in <, > format
